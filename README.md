@@ -30,9 +30,9 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -e ".[dev]"
 python examples/train_demo.py --db artifacts/runbook.sqlite3
-runbook list --db artifacts/runbook.sqlite3
-runbook compare --db artifacts/runbook.sqlite3
-runbook promote <RUN_ID> --db artifacts/runbook.sqlite3 --metric accuracy --minimum 0.75
+runbook --db artifacts/runbook.sqlite3 list
+runbook --db artifacts/runbook.sqlite3 compare --metric accuracy
+runbook --db artifacts/runbook.sqlite3 promote <RUN_ID> --metric accuracy --minimum 0.75
 pytest -q
 ```
 
