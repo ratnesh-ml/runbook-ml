@@ -1,5 +1,7 @@
 # Runbook ML
 
+[![CI](https://github.com/ratnesh-ml/runbook-ml/actions/workflows/test.yml/badge.svg)](https://github.com/ratnesh-ml/runbook-ml/actions/workflows/test.yml)
+
 Runbook ML is a small experiment tracker and model registry for making ML
 work reproducible. It logs parameters, metrics, tags, source commit text,
 and artifacts into SQLite; compares runs; and applies a visible promotion
@@ -53,6 +55,12 @@ This is a local SQLite tracker, not a multi-user production registry. The
 promotion gate checks stored metrics but does not evaluate fairness, drift,
 latency, or security. Next steps include dataset fingerprints, model cards,
 role-based access, an immutable event log, and a real dashboard.
+
+
+## Contribution and verification
+
+The repository includes contributor guidance in [`CONTRIBUTING.md`](CONTRIBUTING.md). GitHub Actions compiles the source and examples and runs the test suite on every push and pull request. Use synthetic or permission-cleared datasets and artifacts only.
+
 
 ## License
 
