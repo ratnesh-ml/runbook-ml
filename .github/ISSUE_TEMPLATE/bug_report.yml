@@ -1,0 +1,24 @@
+name: Experiment lineage bug
+description: Report a reproducible tracking, artifact hash, comparison, promotion-gate, CLI, API, or documentation issue.
+title: "bug: "
+body:
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: Include the command or endpoint request and the lineage or decision result you observed.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Scope check
+      options:
+        - label: I used local or synthetic artifacts and did not include credentials or private model data.
+          required: true
